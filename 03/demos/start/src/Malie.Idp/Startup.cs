@@ -2,6 +2,8 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityServer4.EntityFramework.DbContexts;
+using IdentityServer4.EntityFramework.Mappers;
 using IdentityServerHost.Quickstart.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -43,9 +46,28 @@ namespace Malie.Idp
                 options.ConfigureDbContext = builder => 
                     builder.UseSqlServer(connectionString, options => options.MigrationsAssembly(currentAssembly)));
 
+            builder.AddOperationalStore(options =>
+                options.ConfigureDbContext = builder =>
+                    builder.UseSqlServer(connectionString, options => options.MigrationsAssembly(currentAssembly)));
+
             // not recommended for production - you need to store your key material somewhere secure
             // builder.AddDeveloperSigningCredential();
             builder.AddSigningCredential(LoadCertificate());
+        }
+
+        private X509Certificate2 LoadCertificate()
+        {
+            var thumbprint = "29030b53c1576c2af5a78cb6f563c181f0f252ce";
+
+            using var store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+            store.Open(OpenFlags.ReadOnly);
+            var certificates = store.Certificates.Find(X509FindType.FindByThumbprint, thumbprint, validOnly: true);
+            if(certificates.Count == 0)
+            {
+                throw new Exception("The specified certificate was not found");
+            }
+
+            return certificates[0];
         }
 
         public void Configure(IApplicationBuilder app)
@@ -54,6 +76,8 @@ namespace Malie.Idp
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            InitializeConfigurationData(app);
 
             // uncomment if you want to add MVC
             app.UseStaticFiles();
@@ -66,19 +90,39 @@ namespace Malie.Idp
             app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
         }
 
-        private X509Certificate2 LoadCertificate()
+        private void InitializeConfigurationData(IApplicationBuilder app)
         {
-            var thumbprint = "af2b0d8045aa098e851eb5d08600a6bd2f6c0761";
+            using var scope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
 
-            using var store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
-            store.Open(OpenFlags.ReadOnly);
-            var certificates = store.Certificates.Find(X509FindType.FindByThumbprint, thumbprint, validOnly: true);
-            if(certificates.Count == 0)
+            var persistedGrantContext = scope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>();
+            persistedGrantContext.Database.Migrate();
+
+            var context = scope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
+            context.Database.Migrate();
+
+            if(!context.Clients.Any())
             {
-                throw new Exception("The specified certificate was not found");
+                context.Clients.AddRange(Config.Clients.Select(client => client.ToEntity()));
+                context.SaveChanges();
             }
 
-            return certificates[0];
+            if (!context.IdentityResources.Any())
+            {
+                context.IdentityResources.AddRange(Config.Ids.Select(id => id.ToEntity()));
+                context.SaveChanges();
+            }
+
+            if (!context.ApiScopes.Any())
+            {
+                context.ApiScopes.AddRange(Config.Apis.Select(api => api.ToEntity()));
+                context.SaveChanges();
+            }
+
+            if (!context.ApiResources.Any())
+            {
+                context.ApiResources.AddRange(Config.ApiResources.Select(apiResource => apiResource.ToEntity()));
+                context.SaveChanges();
+            }
         }
     }
 }

@@ -39,7 +39,6 @@
           "Serilog.AspNetCore": "3.1.0",
           "Serilog.Sinks.Console": "3.1.1",
           "Serilog.Sinks.File": "4.0.0",
-          "System.Security.Principal.Windows": "4.7.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -483,7 +482,7 @@
           "Microsoft.Win32.Registry": "4.5.0",
           "System.Configuration.ConfigurationManager": "4.5.0",
           "System.Runtime.Caching": "4.5.0",
-          "System.Security.Principal.Windows": "4.7.0",
+          "System.Security.Principal.Windows": "4.5.0",
           "System.Text.Encoding.CodePages": "4.5.0",
           "runtime.native.System.Data.SqlClient.sni": "4.4.0"
         },
@@ -895,7 +894,7 @@
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
           "System.Security.AccessControl": "4.5.0",
-          "System.Security.Principal.Windows": "4.7.0"
+          "System.Security.Principal.Windows": "4.5.0"
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -1342,7 +1341,7 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.Handles": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Principal.Windows": "4.7.0",
+          "System.Security.Principal.Windows": "4.5.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
           "runtime.native.System": "4.3.0"
@@ -1542,7 +1541,7 @@
       "System.Security.AccessControl/4.5.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.7.0"
+          "System.Security.Principal.Windows": "4.5.0"
         }
       },
       "System.Security.Cryptography.Cng/4.5.0": {},
@@ -1578,7 +1577,11 @@
           "System.Security.AccessControl": "4.5.0"
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {},
+      "System.Security.Principal.Windows/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        }
+      },
       "System.Security.SecureString/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -4140,12 +4143,12 @@
       "path": "system.security.permissions/4.5.0",
       "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
     },
-    "System.Security.Principal.Windows/4.7.0": {
+    "System.Security.Principal.Windows/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
-      "path": "system.security.principal.windows/4.7.0",
-      "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+      "sha512": "sha512-U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
     },
     "System.Security.SecureString/4.3.0": {
       "type": "package",

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {}
+    "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {
+    "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
+        "projectUniqueName": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
         "projectName": "ImageGallery.Client",
-        "projectPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
-        "packagesPath": "C:\\Users\\talk2\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Client\\obj\\",
+        "projectPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
+        "packagesPath": "C:\\Users\\mpussah\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\talk2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mpussah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/R1Menu/_packaging/MaximNuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
-                "projectPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj"
+              "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
+                "projectPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj"
               }
             }
           }
@@ -87,17 +92,21 @@
         }
       }
     },
-    "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
+    "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
+        "projectUniqueName": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
         "projectName": "ImageGallery.Model",
-        "projectPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
-        "packagesPath": "C:\\Users\\talk2\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\ImageGallery.Model\\obj\\",
+        "projectPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
+        "packagesPath": "C:\\Users\\mpussah\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\ImageGallery.Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\talk2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mpussah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,7 +114,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/R1Menu/_packaging/MaximNuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {

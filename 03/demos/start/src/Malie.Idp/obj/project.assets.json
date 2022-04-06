@@ -1612,20 +1612,23 @@
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {
+      "System.Security.Principal.Windows/4.5.0": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        },
         "compile": {
-          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "unix"
           },
-          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -5755,10 +5758,10 @@
         "version.txt"
       ]
     },
-    "System.Security.Principal.Windows/4.7.0": {
-      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
+    "System.Security.Principal.Windows/4.5.0": {
+      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
       "type": "package",
-      "path": "system.security.principal.windows/4.7.0",
+      "path": "system.security.principal.windows/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5766,16 +5769,12 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.dll",
-        "lib/net461/System.Security.Principal.Windows.xml",
         "lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.dll",
-        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
         "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.xml",
-        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
-        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/System.Security.Principal.Windows.dll",
         "ref/netstandard1.3/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
@@ -5791,19 +5790,12 @@
         "ref/netstandard2.0/System.Security.Principal.Windows.xml",
         "ref/uap10.0.16299/_._",
         "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
-        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
-        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
-        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.4.7.0.nupkg.sha512",
+        "system.security.principal.windows.4.5.0.nupkg.sha512",
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6612,24 +6604,28 @@
       "Serilog >= 2.9.0",
       "Serilog.AspNetCore >= 3.1.0",
       "Serilog.Sinks.Console >= 3.1.1",
-      "Serilog.Sinks.File >= 4.0.0",
-      "System.Security.Principal.Windows >= 4.7.0"
+      "Serilog.Sinks.File >= 4.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\talk2\\.nuget\\packages\\": {}
+    "C:\\Users\\mpussah\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
+      "projectUniqueName": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
       "projectName": "Malie.Idp",
-      "projectPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
-      "packagesPath": "C:\\Users\\talk2\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\obj\\",
+      "projectPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
+      "packagesPath": "C:\\Users\\mpussah\\.nuget\\packages\\",
+      "outputPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\talk2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mpussah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6637,7 +6633,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/R1Menu/_packaging/MaximNuget/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -6688,10 +6685,6 @@
           "Serilog.Sinks.File": {
             "target": "Package",
             "version": "[4.0.0, )"
-          },
-          "System.Security.Principal.Windows": {
-            "target": "Package",
-            "version": "[4.7.0, )"
           }
         },
         "imports": [

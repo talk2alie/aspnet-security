@@ -25,12 +25,12 @@ namespace Malie.Idp
         public static IEnumerable<ApiScope> Apis =>
             new ApiScope[]
             { 
-                new ApiScope("imagegalleryapi", "Image Gallery API", new[] {"role", JwtClaimTypes.GivenName})
+                new ApiScope("imagegalleryapi", "Image Gallery API")
             };
 
         public static IEnumerable<ApiResource> ApiResources =>
             new ApiResource[] {
-                new ApiResource("imagegalleryapi", "Image Gallery API")
+                new ApiResource("imagegalleryapi", "Image Gallery API", new [] {"subscriptionlevel"})
                     {
                         Scopes = { "imagegalleryapi"},
                         ApiSecrets = { new Secret("apisecret".Sha256())}
