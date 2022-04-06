@@ -6617,24 +6617,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mpussah\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\talk2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
+      "projectUniqueName": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
       "projectName": "Malie.Idp",
-      "projectPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
-      "packagesPath": "C:\\Users\\mpussah\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\securing-aspnet-core-3-oauth2-openid-connect\\03\\demos\\start\\src\\Malie.Idp\\obj\\",
+      "projectPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\Malie.Idp.csproj",
+      "packagesPath": "C:\\Users\\talk2\\.nuget\\packages\\",
+      "outputPath": "C:\\Repos\\aspnet-security\\03\\demos\\start\\src\\Malie.Idp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mpussah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\talk2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6642,8 +6637,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/R1Menu/_packaging/MaximNuget/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

@@ -38,6 +38,10 @@ namespace ImageGallery.Client.HttpHandlers
         private async Task<string> GetAccessTokenAsync()
         {
             var token = await _contextAccessor.HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+            if(string.IsNullOrWhiteSpace(token))
+            {
+                return token;
+            }
 
             var expiresAt = await _contextAccessor.HttpContext.GetTokenAsync("expires_at");
             var expiresAtOffset = DateTimeOffset.Parse(expiresAt, CultureInfo.InvariantCulture);

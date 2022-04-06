@@ -8,3 +8,13 @@ C:\Repos\securing-aspnet-core-3-oauth2-openid-connect\03\demos\start\src\ImageGa
 C:\Repos\securing-aspnet-core-3-oauth2-openid-connect\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.csproj.CoreCompileInputs.cache
 C:\Repos\securing-aspnet-core-3-oauth2-openid-connect\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.dll
 C:\Repos\securing-aspnet-core-3-oauth2-openid-connect\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.pdb
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\bin\Debug\netstandard2.0\ImageGallery.Model.deps.json
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\bin\Debug\netstandard2.0\ImageGallery.Model.dll
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\bin\Debug\netstandard2.0\ImageGallery.Model.pdb
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.csproj.AssemblyReference.cache
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.AssemblyInfoInputs.cache
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.AssemblyInfo.cs
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.csproj.CoreCompileInputs.cache
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.dll
+C:\Repos\aspnet-security\03\demos\start\src\ImageGallery.Model\obj\Debug\netstandard2.0\ImageGallery.Model.pdb
