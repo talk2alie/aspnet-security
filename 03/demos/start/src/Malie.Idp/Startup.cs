@@ -5,6 +5,8 @@
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using IdentityServerHost.Quickstart.UI;
+using Malie.Idp.Data;
+using Malie.Idp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -33,14 +35,16 @@ namespace Malie.Idp
 
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
+            services.AddDbContext<IdentityDbContext>(b => b.UseSqlServer(connectionString));
+            services.AddScoped<ILocalUserService, LocalUserService>(); 
 
             var currentAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             var builder = services.AddIdentityServer(options =>
             {
                 // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
                 options.EmitStaticAudienceClaim = true;
-            })            
-            .AddTestUsers(TestUsers.Users);
+            });            
+            // .AddTestUsers(TestUsers.Users);
 
             builder.AddConfigurationStore(options => 
                 options.ConfigureDbContext = builder => 
