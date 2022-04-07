@@ -35,7 +35,6 @@ namespace Malie.Idp
 
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
-            services.AddDbContext<IdentityDbContext>(b => b.UseSqlServer(connectionString));
             services.AddScoped<ILocalUserService, LocalUserService>(); 
 
             var currentAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
@@ -43,8 +42,9 @@ namespace Malie.Idp
             {
                 // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
                 options.EmitStaticAudienceClaim = true;
-            });            
-            // .AddTestUsers(TestUsers.Users);
+            })
+            .AddProfileService<LocalUserProfileService>();            
+            services.AddDbContext<IdentityDbContext>(b => b.UseSqlServer(connectionString));
 
             builder.AddConfigurationStore(options => 
                 options.ConfigureDbContext = builder => 
